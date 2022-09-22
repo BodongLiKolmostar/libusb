@@ -2553,7 +2553,7 @@ static int darwin_detach_kernel_driver (struct libusb_device_handle *dev_handle,
       usbi_info (ctx, "no capture entitlements. may not be able to detach the kernel driver for this device");
       if (0 != geteuid()) {
         usbi_warn (ctx, "USB device capture requires either an entitlement (com.apple.vm.device-access) or root privilege");
-        return LIBUSB_ERROR_ACCESS;
+        // return LIBUSB_ERROR_ACCESS;
       }
     }
 
